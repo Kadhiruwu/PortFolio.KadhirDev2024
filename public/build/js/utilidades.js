@@ -1,0 +1,1 @@
+function mostrarAlerta(e,t,o,r=!0){const a=document.querySelector(".alerta");a&&a.remove();const n=document.createElement("DIV");n&&n.remove(),n.classList.add("alerta",t),n.textContent=e,o.appendChild(n),r&&setTimeout(()=>{n.remove()},2500)}

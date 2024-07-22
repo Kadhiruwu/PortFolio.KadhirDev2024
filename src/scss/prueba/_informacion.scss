@@ -1,0 +1,88 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.informacion-personal{
+   margin: 2rem;
+   h3{
+    color: #6C6368;
+   }
+    @include m.tablet{
+        margin: 2rem;
+        padding: 5rem;
+    }
+    .contenido-personal{
+        @include m.grid(1, 2rem);
+        @include m.tablet{
+            @include m.grid(2, 2rem);
+        }
+
+        .personal-izquierdo{
+            h4{
+                font-size: 2rem;
+                color: #453745;
+            }
+            p{
+                font-weight: bold;
+                color: #2b06a5;
+                span{
+                    color: #725b3b;
+                }
+            }
+            
+        }
+        .boton__boton{
+        display: flex;
+            .boton2{
+                @include m.boton(#7d493f, #dce0e6);
+                border-radius: .5rem;
+                align-self: flex-start;
+                margin: 0;
+                font-weight: bold;
+
+                
+                @include m.tablet{
+                    width: auto;
+                }
+            }
+        }
+
+        .personal-derecho{
+            display: flex;
+            justify-content: center;
+            
+            .imagen_final{
+                display: flex;
+               justify-content: center;
+               max-width: 30%;
+               img{
+                border-radius: 3rem;
+            }
+                @include m.tablet{
+                    display: flex;
+                    justify-content: center;
+                    max-width: 50%;
+                   
+                    
+                }
+                
+            }
+        }
+
+        
+    }
+
+}
+
+.footer{
+    background-color: #9d9382;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: #f2ecdc;
+    font-weight: bold;
+ 
+    
+    p{
+        margin: 0;
+    }
+}
